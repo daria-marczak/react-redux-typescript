@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  background-color: red;
+  height: 100vh;
+}
+
+.header {
+  color: blue;
+  font-size: 240px;
+}
+

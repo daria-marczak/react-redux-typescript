@@ -1,5 +1,7 @@
 import React from 'react';
 
-const Header: React.FC = () => <header>Header</header>;
+import './Header.css';
+
+const Header: React.FC = () => <header className="header">Header</header>;
 
 export default Header;
