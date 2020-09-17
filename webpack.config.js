@@ -1,45 +1,47 @@
 const path = require('path');
+const webpackMerge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
-module.exports = {
-  mode: 'none',
-  entry: {
-    app: path.join(__dirname, 'src', 'index.tsx'),
-  },
-  target: 'web',
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
-    plugins: [new TsconfigPathsPlugin()],
-  },
-  module: {
-    rules: [
-      {
-        enforce: 'pre',
-        test: /\.ts$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
+const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);
+
+module.exports = ({ mode } = { mode: 'production' }) => {
+  return webpackMerge.merge(
+    {
+      mode: 'none',
+      entry: {
+        app: path.join(__dirname, 'src', 'index.tsx'),
       },
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: '/node_modules/',
+      target: 'web',
+      resolve: {
+        extensions: ['.ts', '.tsx', '.js'],
+        plugins: [new TsconfigPathsPlugin()],
       },
-      {
-        test: /\.css$/,
-        use: [{ loader: MiniCssExtractPlugin.loader }, 'css-loader'],
+      module: {
+        rules: [
+          {
+            enforce: 'pre',
+            test: /\.ts$/,
+            exclude: /node_modules/,
+            loader: 'eslint-loader',
+          },
+          {
+            test: /\.tsx?$/,
+            use: 'ts-loader',
+            exclude: '/node_modules/',
+          },
+        ],
       },
-    ],
-  },
-  output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, 'dist'),
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.html'),
-    }),
-    new MiniCssExtractPlugin({ filename: '[name].css' }),
-  ],
+      output: {
+        filename: '[name].js',
+        path: path.resolve(__dirname, 'dist'),
+      },
+      plugins: [
+        new HtmlWebpackPlugin({
+          template: path.join(__dirname, 'src', 'index.html'),
+        }),
+      ],
+    },
+    modeConfig(mode),
+  );
 };
