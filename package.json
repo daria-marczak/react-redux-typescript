@@ -46,7 +46,7 @@
     "lint:fix": "eslint --write src/**/*.tsx"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": [
+    "src/**/*.{ts,tsx}": [
       "yarn run lint"
     ]
   },
