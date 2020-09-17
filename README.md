@@ -14,7 +14,7 @@ Personal React boilerplate project.
 | Script   | Description                             |
 | -------- | --------------------------------------- |
 | dev      | Run the application in development mode |
-| build    | Build application                       |
+| prod     | Run the application in production mode  |
 | format   | Use prettier to format the files        |
 | lint     | Run eslint (only point out the issues)  |
 | lint:fix | Run eslint with `--write` flag          |
