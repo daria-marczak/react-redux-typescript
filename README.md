@@ -1,6 +1,29 @@
 # React boilerplate
 
-Personal React boilerplate project that uses:
+Personal React boilerplate project.
+
+## Technologies
+
+- yarn
 - Webpack
-- Eslint and prettier 🎨
+- ESLint and prettier 🎨
 - Lint-staged with husky
+
+## Scripts
+
+| Script   | Description                             |
+| -------- | --------------------------------------- |
+| dev      | Run the application in development mode |
+| build    | Build application                       |
+| format   | Use prettier to format the files        |
+| lint     | Run eslint (only point out the issues)  |
+| lint:fix | Run eslint with `--write` flag          |
+
+## Goals
+
+🚧 implement some code statistics tools (CC, code forensics)
+🚧 CircleCi config + AWS deployment
+🚧 Storybook configuration (with nginx to deploy)
+🚧 Webpack workflows for better performance (styles, images pipelines)
+🚧 config for styled-components
+🚧 separate config for SCSS

@@ -24,5 +24,15 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript"
-  ]
+  ],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    }
+  }
 }
