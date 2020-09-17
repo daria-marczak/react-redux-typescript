@@ -21,9 +21,9 @@ Personal React boilerplate project.
 
 ## Goals
 
-🚧 implement some code statistics tools (CC, code forensics)
-🚧 CircleCi config + AWS deployment
-🚧 Storybook configuration (with nginx to deploy)
-🚧 Webpack workflows for better performance (styles, images pipelines)
-🚧 config for styled-components
-🚧 separate config for SCSS
+- 🚧 implement some code statistics tools (CC, code forensics)
+- 🚧 CircleCi config + AWS deployment
+- 🚧 Storybook configuration (with nginx to deploy)
+- 🚧 Webpack workflows for better performance (styles, images pipelines)
+- 🚧 config for styled-components
+- 🚧 separate config for SCSS
