@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MediaQuerySplittingPlugin = require('media-query-splitting-plugin');
 
 module.exports = () => ({
   output: {
@@ -12,5 +13,11 @@ module.exports = () => ({
       },
     ],
   },
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+      chunkFilename: '[id].[contenthash].css',
+    }),
+    new MediaQuerySplittingPlugin(),
+  ],
 });
