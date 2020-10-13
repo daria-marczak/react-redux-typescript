@@ -6,6 +6,9 @@
     "module": "es6",
     "jsx": "react",
     "noImplicitAny": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "assets/*": ["src/assets/*"]
+    }
   }
 }

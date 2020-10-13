@@ -30,6 +30,19 @@ module.exports = ({ mode } = { mode: 'production' }) => {
             use: 'ts-loader',
             exclude: '/node_modules/',
           },
+          {
+            test: /\.(png|jpe?g|gif)$/i,
+            use: [
+              {
+                loader: 'url-loader',
+                options: {
+                  limit: 8192,
+                  name: '[hash].[ext]',
+                  outputPath: 'assets',
+                },
+              },
+            ],
+          },
         ],
       },
       output: {
