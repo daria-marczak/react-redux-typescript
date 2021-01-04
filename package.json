@@ -52,7 +52,7 @@
     "webpack-merge": "^5.1.4"
   },
   "scripts": {
-    "dev": "webpack-dev-server --env.mode development",
+    "dev": "webpack-dev-server --hot=only --env.mode development",
     "prod": "webpack --config webpack.config.js --env.mode production",
     "format": "prettier --write ./src/**/*.tsx",
     "lint": "eslint src/**/*.tsx",
