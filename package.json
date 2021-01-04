@@ -5,9 +5,11 @@
   "license": "MIT",
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "svg-url-loader": "^7.1.1"
   },
   "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "@types/webpack": "^4.41.22",
@@ -30,6 +32,11 @@
     "file-loader": "^6.1.1",
     "html-webpack-plugin": "^4.4.1",
     "husky": "^4.3.0",
+    "image-minimizer-webpack-plugin": "^2.1.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.1",
+    "imagemin-svgo": "^8.0.0",
     "jest": "^26.4.2",
     "lint-staged": "^10.4.0",
     "media-query-splitting-plugin": "^1.1.17",

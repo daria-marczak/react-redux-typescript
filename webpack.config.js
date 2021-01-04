@@ -43,6 +43,10 @@ module.exports = ({ mode } = { mode: 'production' }) => {
               },
             ],
           },
+          {
+            test: /\.svg$/,
+            use: ['@svgr/webpack', 'url-loader'],
+          }
         ],
       },
       output: {
