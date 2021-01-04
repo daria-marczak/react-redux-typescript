@@ -9,6 +9,11 @@
     "allowSyntheticDefaultImports": true,
     "paths": {
       "assets/*": ["src/assets/*"]
-    }
-  }
+    },
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+  ]
 }

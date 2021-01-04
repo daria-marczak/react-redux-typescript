@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import './Header.scss';
 import image from 'assets/doggo.png';

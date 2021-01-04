@@ -1,4 +1,5 @@
 module.exports = () => ({
+  mode: 'development',
   module: {
     rules: [
       {
@@ -21,4 +22,8 @@ module.exports = () => ({
       },
     ],
   },
+  devtool: 'eval-source-map',
+  devServer: {
+    port: 9000
+  }
 });
