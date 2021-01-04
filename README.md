@@ -1,6 +1,6 @@
-# React boilerplate
+<center> <h1>React boilerplate</h1> </center>
 
-Personal React boilerplate project.
+Personal React boilerplate project for learning purposes.
 
 ## Technologies
 
@@ -27,3 +27,6 @@ Personal React boilerplate project.
 - 🚧 Webpack workflows for better performance (styles, images pipelines)
 - 🚧 config for styled-components
 - 🚧 separate config for SCSS
+
+## Notes
+In order to optimize SVGs, please use the [svgomg][https://jakearchibald.github.io/svgomg/].

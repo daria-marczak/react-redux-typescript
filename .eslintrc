@@ -10,7 +10,8 @@
     "tsconfigRootDir": "./"
   },
   "rules": {
-    "semi": "error"
+    "semi": "error",
+    "no-unused-vars": "warn"
   },
   "extends": [
     "airbnb-typescript",
