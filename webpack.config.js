@@ -26,11 +26,6 @@ module.exports = ({ mode, styling } = { mode: 'production', styling: 'scss' }) =
             loader: 'eslint-loader',
           },
           {
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-            exclude: '/node_modules/',
-          },
-          {
             test: /\.(png|jpe?g|gif)$/i,
             use: [
               {

@@ -8,7 +8,7 @@ module.exports = () => ({
         test: /\.tsx?$/,
         loader: 'ts-loader',
         options: {
-          getCustomTransformers: () => ({ before: [styledComponentsTransformer] })
+          getCustomTransformers: () => ({ before: [styledComponentsTransformer] }),
         }
       },
     ]
