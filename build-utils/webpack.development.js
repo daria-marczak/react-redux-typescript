@@ -1,29 +1,14 @@
-module.exports = () => ({
-  mode: 'development',
-  module: {
-    rules: [
-      {
-        test: /\.s[ac]ss$/i,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
-      },
-    ],
-  },
-  devtool: 'eval-source-map',
-  devServer: {
-    port: 9000
-  }
-});
+const webpackMerge = require('webpack-merge');
+
+const styleConfig = env => require(`./build-utils/webpack.development.${env}`)(env);
+
+module.exports = ({ mode, styling }) => {
+  return webpackMerge.merge({
+    mode,
+    devtool: 'eval-source-map',
+    devServer: {
+      port: 9000
+    }
+  }, styleConfig(styling),
+  )
+};
