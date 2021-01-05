@@ -2,6 +2,8 @@ const path = require('path');
 const webpackMerge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);
 
@@ -29,6 +31,13 @@ module.exports = ({ mode } = { mode: 'production' }) => {
             test: /\.tsx?$/,
             use: 'ts-loader',
             exclude: '/node_modules/',
+          },
+          {
+            test: /\.tsx?$/,
+            loader: 'ts-loader',
+            options: {
+              getCustomTransformers: () => ({ before: [styledComponentsTransformer] })
+            }
           },
           {
             test: /\.(png|jpe?g|gif)$/i,

@@ -24,9 +24,9 @@ Personal React boilerplate project for learning purposes.
 - 🚧 implement some code statistics tools (CC, code forensics)
 - 🚧 CircleCi config + AWS deployment
 - 🚧 Storybook configuration (with nginx to deploy)
-- 🚧 Webpack workflows for better performance (styles, images pipelines)
-- 🚧 config for styled-components
-- 🚧 separate config for SCSS
+- ✅ Webpack workflows for better performance (styles, images pipelines)
+- ✅ config for styled-components
+- ✅ separate config for SCSS
 
 ## Notes
 In order to optimize SVGs, please use the [svgomg][https://jakearchibald.github.io/svgomg/].
