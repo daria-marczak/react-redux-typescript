@@ -7,4 +7,8 @@ const Text = styled.p`
   text-align: center;
 `;
 
-export const Paragraph: React.FC = ({ children }) => <Text>{children}</Text>;
+interface Props {
+  children: React.ReactNode;
+}
+
+export const Paragraph: React.FC<Props> = ({ children }) => <Text>{children}</Text>;

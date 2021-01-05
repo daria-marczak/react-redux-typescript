@@ -1,6 +1,6 @@
 const webpackMerge = require('webpack-merge');
 
-const styleConfig = env => require(`./build-utils/webpack.production.${env}`)(env);
+const styleConfig = env => require(`./webpack.production.${env}`)(env);
 
 module.exports = ({ mode, styling }) => {
   return webpackMerge.merge({

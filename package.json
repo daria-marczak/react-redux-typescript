@@ -57,7 +57,9 @@
   "scripts": {
     "dev": "webpack-dev-server --hot=only --env.mode development",
     "prod": "webpack --config webpack.config.js --env.mode production",
-    "dev:styled-components": "webpack-dev-server --hot=only --env.mode development --env.styling=styled",
+    "prod:styled": "webpack --config webpack.config.js --env.mode production --env.styling=styled",
+    "prod:scss": "webpack --config webpack.config.js --env.mode production --env.styling=scss",
+    "dev:styled": "webpack-dev-server --hot=only --env.mode development --env.styling=styled",
     "dev:scss": "webpack-dev-server --hot=only --env.mode development --env.styling=scss",
     "format": "prettier --write ./src/**/*.tsx",
     "lint": "eslint src/**/*.tsx",
