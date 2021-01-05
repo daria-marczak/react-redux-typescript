@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 
-import './Header.scss';
+// import './Header.scss';
 import image from 'assets/doggo.png';
 import { ReactComponent as Icon } from 'assets/checkmark.svg';
 

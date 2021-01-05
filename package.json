@@ -4,8 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@types/styled-components": "^5.1.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "styled-components": "^5.2.1",
     "svg-url-loader": "^7.1.1"
   },
   "devDependencies": {
@@ -45,6 +47,7 @@
     "ts-loader": "^8.0.3",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
     "typescript": "^4.0.2",
+    "typescript-plugin-styled-components": "^1.4.4",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
@@ -52,8 +55,12 @@
     "webpack-merge": "^5.1.4"
   },
   "scripts": {
-    "dev": "webpack-dev-server --env.mode development",
+    "dev": "webpack-dev-server --hot=only --env.mode development",
     "prod": "webpack --config webpack.config.js --env.mode production",
+    "prod:styled": "webpack --config webpack.config.js --env.mode production --env.styling=styled",
+    "prod:scss": "webpack --config webpack.config.js --env.mode production --env.styling=scss",
+    "dev:styled": "webpack-dev-server --hot=only --env.mode development --env.styling=styled",
+    "dev:scss": "webpack-dev-server --hot=only --env.mode development --env.styling=scss",
     "format": "prettier --write ./src/**/*.tsx",
     "lint": "eslint src/**/*.tsx",
     "lint:fix": "eslint --write src/**/*.tsx"

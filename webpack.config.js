@@ -3,9 +3,9 @@ const webpackMerge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
-const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);
+const modeConfig = env => require(`./build-utils/webpack.${env.mode}`)(env);
 
-module.exports = ({ mode } = { mode: 'production' }) => {
+module.exports = ({ mode, styling } = { mode: 'production', styling: 'scss' }) => {
   return webpackMerge.merge(
     {
       mode: 'none',
@@ -24,11 +24,6 @@ module.exports = ({ mode } = { mode: 'production' }) => {
             test: /\.ts$/,
             exclude: /node_modules/,
             loader: 'eslint-loader',
-          },
-          {
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-            exclude: '/node_modules/',
           },
           {
             test: /\.(png|jpe?g|gif)$/i,
@@ -59,6 +54,6 @@ module.exports = ({ mode } = { mode: 'production' }) => {
         }),
       ],
     },
-    modeConfig(mode),
+    modeConfig({ mode, styling }),
   );
 };

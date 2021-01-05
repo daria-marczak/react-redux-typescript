@@ -4,11 +4,14 @@
     "outDir": "./dist",
     "target": "ES2019",
     "module": "es6",
+    "moduleResolution": "node",
     "jsx": "react",
     "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "assets/*": ["src/assets/*"]
+      "assets/*": [
+        "src/assets/*"
+      ]
     },
     "sourceMap": true
   },
