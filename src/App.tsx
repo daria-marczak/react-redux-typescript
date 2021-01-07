@@ -1,25 +1,29 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Switch, NavLink as Link, Route } from 'react-router-dom';
 
-import About from 'pages/About';
-import Home from 'pages/Home';
+const Home = lazy(() => import('pages/Home'));
+const About = lazy(() => import('pages/About'));
 
 const App: React.FC = () => (
-  <BrowserRouter>
-    <div>
-      <div className="menu">
-        <Link exact to="/">
-          Home
-        </Link>
-        <Link to="/about">About</Link>
-      </div>
+  <Suspense fallback={<p>Loading...</p>}>
+    <BrowserRouter>
+      <div>
+        <div>
+          <Link exact to="/">
+            Home
+          </Link>
+        </div>
+        <div>
+          <Link to="/about">About</Link>
+        </div>
 
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-      </Switch>
-    </div>
-  </BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+        </Switch>
+      </div>
+    </BrowserRouter>
+  </Suspense>
 );
 
 export default App;

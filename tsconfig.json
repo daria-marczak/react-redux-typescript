@@ -3,7 +3,7 @@
     "baseUrl": "./src",
     "outDir": "./dist",
     "target": "ES2019",
-    "module": "es6",
+    "module": "esnext",
     "moduleResolution": "node",
     "jsx": "react",
     "noImplicitAny": true,
