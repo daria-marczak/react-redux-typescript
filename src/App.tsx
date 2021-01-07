@@ -1,12 +1,12 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter, Switch, NavLink as Link, Route } from 'react-router-dom';
+import { HashRouter, Switch, NavLink as Link, Route } from 'react-router-dom';
 
 const Home = lazy(() => import('pages/Home'));
 const About = lazy(() => import('pages/About'));
 
 const App: React.FC = () => (
   <Suspense fallback={<p>Loading...</p>}>
-    <BrowserRouter>
+    <HashRouter>
       <div>
         <div>
           <Link exact to="/">
@@ -22,7 +22,7 @@ const App: React.FC = () => (
           <Route path="/about" component={About} />
         </Switch>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   </Suspense>
 );
 
