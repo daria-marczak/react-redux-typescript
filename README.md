@@ -24,6 +24,9 @@ Personal React boilerplate project for learning purposes.
 - 🚧 implement some code statistics tools (CC, code forensics)
 - 🚧 CircleCi config + AWS deployment
 - 🚧 Storybook configuration (with nginx to deploy)
+- 🚧 [Lighthouse CI][https://github.com/GoogleChrome/lighthouse-ci]
+- 🚧 [webpack bundle analyzer][https://www.npmjs.com/package/webpack-bundle-analyzer]
+- 🚧 tree shaking and code splitting
 - ✅ Webpack workflows for better performance (styles, images pipelines)
 - ✅ config for styled-components
 - ✅ separate config for SCSS

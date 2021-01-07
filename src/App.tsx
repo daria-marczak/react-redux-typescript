@@ -1,14 +1,25 @@
 import React from 'react';
-// import './style.scss';
+import { BrowserRouter, Switch, NavLink as Link, Route } from 'react-router-dom';
 
-import Header from 'components/Header/Header';
-import { Paragraph } from 'components/Paragraph/Paragraph';
+import About from 'pages/About';
+import Home from 'pages/Home';
 
 const App: React.FC = () => (
-  <div className="app">
-    <Header />
-    <Paragraph>jwneg</Paragraph>
-  </div>
+  <BrowserRouter>
+    <div>
+      <div className="menu">
+        <Link exact to="/">
+          Home
+        </Link>
+        <Link to="/about">About</Link>
+      </div>
+
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+      </Switch>
+    </div>
+  </BrowserRouter>
 );
 
 export default App;
