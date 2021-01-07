@@ -26,7 +26,7 @@ Personal React boilerplate project for learning purposes.
 - 🚧 Storybook configuration (with nginx to deploy)
 - 🚧 [Lighthouse CI][https://github.com/GoogleChrome/lighthouse-ci]
 - 🚧 [webpack bundle analyzer][https://www.npmjs.com/package/webpack-bundle-analyzer]
-- 🚧 tree shaking and code splitting
+- ✅ tree shaking and code splitting
 - ✅ Webpack workflows for better performance (styles, images pipelines)
 - ✅ config for styled-components
 - ✅ separate config for SCSS

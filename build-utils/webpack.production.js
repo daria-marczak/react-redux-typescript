@@ -21,6 +21,7 @@ module.exports = ({ mode, styling }) => {
       ],
     },
     optimization: {
+      usedExports: true,
       splitChunks: {
         cacheGroups: {
           default: false,
