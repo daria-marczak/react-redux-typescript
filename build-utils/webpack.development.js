@@ -7,8 +7,9 @@ module.exports = ({ mode, styling }) => {
     mode,
     devtool: 'eval-source-map',
     devServer: {
-      port: 9000
-    }
+      port: 9000,
+      historyApiFallback: true,
+    },
   }, styleConfig(styling),
   )
 };

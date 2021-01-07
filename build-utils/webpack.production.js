@@ -6,7 +6,7 @@ module.exports = ({ mode, styling }) => {
   return webpackMerge.merge({
     mode,
     output: {
-      filename: 'bundle.js',
+      publicPath: '/dist/',
     },
     module: {
       rules: [
@@ -19,6 +19,22 @@ module.exports = ({ mode, styling }) => {
           enforce: 'pre'
         }
       ],
+    },
+    optimization: {
+      usedExports: true,
+      splitChunks: {
+        cacheGroups: {
+          default: false,
+          vendors: false,
+          vendor: {
+            name: 'vendor',
+            // sync + async chunks
+            chunks: 'all',
+            // import file path containing node_modules
+            test: /node_modules/
+          }
+        }
+      },
     },
   }, styleConfig(styling))
 };

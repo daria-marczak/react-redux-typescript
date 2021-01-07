@@ -1,14 +1,29 @@
-import React from 'react';
-// import './style.scss';
+import React, { lazy, Suspense } from 'react';
+import { HashRouter, Switch, NavLink as Link, Route } from 'react-router-dom';
 
-import Header from 'components/Header/Header';
-import { Paragraph } from 'components/Paragraph/Paragraph';
+const Home = lazy(() => import('pages/Home'));
+const About = lazy(() => import('pages/About'));
 
 const App: React.FC = () => (
-  <div className="app">
-    <Header />
-    <Paragraph>jwneg</Paragraph>
-  </div>
+  <Suspense fallback={<p>Loading...</p>}>
+    <HashRouter>
+      <div>
+        <div>
+          <Link exact to="/">
+            Home
+          </Link>
+        </div>
+        <div>
+          <Link to="/about">About</Link>
+        </div>
+
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+        </Switch>
+      </div>
+    </HashRouter>
+  </Suspense>
 );
 
 export default App;
