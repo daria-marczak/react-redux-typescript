@@ -8,6 +8,8 @@ Personal React boilerplate project for learning purposes.
 - Webpack
 - ESLint and prettier 🎨
 - Lint-staged with husky
+- React
+- TravisCI
 
 ## Scripts
 
@@ -22,7 +24,7 @@ Personal React boilerplate project for learning purposes.
 ## Goals
 
 - 🚧 implement some code statistics tools (CC, code forensics)
-- 🚧 CircleCi config + AWS deployment
+- ✅ TravisCI config + AWS deployment
 - 🚧 Storybook configuration (with nginx to deploy)
 - 🚧 [Lighthouse CI][https://github.com/GoogleChrome/lighthouse-ci]
 - 🚧 [webpack bundle analyzer][https://www.npmjs.com/package/webpack-bundle-analyzer]
