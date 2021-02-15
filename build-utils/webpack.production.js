@@ -5,9 +5,6 @@ const styleConfig = env => require(`./webpack.production.${env}`)(env);
 module.exports = ({ mode, styling }) => {
   return webpackMerge.merge({
     mode,
-    output: {
-      publicPath: '/dist/',
-    },
     module: {
       rules: [
         {
