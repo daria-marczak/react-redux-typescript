@@ -2,6 +2,7 @@ const path = require('path');
 const webpackMerge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const modeConfig = env => require(`./build-utils/webpack.${env.mode}`)(env);
 
@@ -49,6 +50,7 @@ module.exports = ({ mode, styling } = { mode: 'production', styling: 'scss' }) =
         path: path.resolve(__dirname, 'dist'),
       },
       plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
           template: path.join(__dirname, 'src', 'index.html'),
         }),

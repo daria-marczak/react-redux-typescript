@@ -20,6 +20,7 @@
     "@types/webpack": "^4.41.22",
     "@typescript-eslint/eslint-plugin": "^4.1.0",
     "@typescript-eslint/parser": "^4.1.1",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^4.3.0",
     "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -66,7 +67,8 @@
     "format": "prettier --write ./src/**/*.tsx",
     "lint": "eslint src/**/*.tsx",
     "lint:fix": "eslint --write src/**/*.tsx",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "yarn run prod:scss && aws s3 cp dist/ s3://dmariatesting.com --recursive"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
