@@ -17,7 +17,6 @@ module.exports = () => ({
               sassOptions: {
                 outputStyle: 'compressed',
               },
-              sideEffects: true
             },
           },
         ],
