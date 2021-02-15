@@ -1,26 +1,28 @@
 import React, { lazy, Suspense } from 'react';
 import { HashRouter, Switch, NavLink as Link, Route } from 'react-router-dom';
 
+import 'style.scss';
+
 const Home = lazy(() => import('pages/Home'));
 const About = lazy(() => import('pages/About'));
 
 const App: React.FC = () => (
   <Suspense fallback={<p>Loading...</p>}>
     <HashRouter>
-      <div>
-        <div>
+      <div className="app">
+        <nav>
           <Link exact to="/">
             Home
           </Link>
-        </div>
-        <div>
           <Link to="/about">About</Link>
-        </div>
+        </nav>
 
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-        </Switch>
+        <main className="main">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+          </Switch>
+        </main>
       </div>
     </HashRouter>
   </Suspense>

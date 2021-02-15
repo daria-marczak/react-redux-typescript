@@ -7,4 +7,27 @@ body {
 .app {
   background-color: #333;
   height: 100vh;
+  color: #fff;
+}
+
+a {
+  color: rgb(184, 54, 165);
+  font-weight: bold;
+  font-variant: small-caps;
+  text-decoration: none;
+}
+
+nav {
+  background-color: rgb(48, 48, 48);
+  display: flex;
+  width: 100%;
+  padding: 16px;
+
+  a {
+    margin-right: 16px;
+  }
+}
+
+.main {
+  padding: 16px;
 }
