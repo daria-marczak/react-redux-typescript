@@ -15,6 +15,6 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: $S3_BUCKET
   region: eu-central-1
-  local_dir: dist
+  local_dir: 'dist/'
   on:
     branch: master
