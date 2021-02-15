@@ -7,7 +7,6 @@ cache:
     - node_modules
 script:
   - yarn test
-before_deploy:
   - yarn run prod:scss
 deploy:
   provider: s3
@@ -15,6 +14,6 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: $S3_BUCKET
   region: eu-central-1
-  local_dir: 'dist/'
+  local_dir: dist
   on:
     branch: master
