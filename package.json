@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@storybook/addon-controls": "^6.1.18",
+    "@storybook/react": "^6.1.18",
     "@types/react-loadable": "^5.5.4",
     "@types/styled-components": "^5.1.7",
     "react": "^16.13.1",
@@ -12,6 +14,10 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@storybook/addon-actions": "^6.1.18",
+    "@storybook/addon-essentials": "^6.1.18",
+    "@storybook/addon-links": "^6.1.18",
     "@svgr/webpack": "^5.5.0",
     "@types/jest": "^26.0.20",
     "@types/react": "^16.9.49",
@@ -20,6 +26,7 @@
     "@types/webpack": "^4.41.22",
     "@typescript-eslint/eslint-plugin": "^4.1.0",
     "@typescript-eslint/parser": "^4.1.1",
+    "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^4.3.0",
     "eslint": "^7.9.0",
@@ -68,7 +75,9 @@
     "lint": "eslint src/**/*.tsx",
     "lint:fix": "eslint --write src/**/*.tsx",
     "test": "jest",
-    "deploy": "yarn run prod:scss && aws s3 cp dist/ s3://dmariatesting.com --recursive"
+    "deploy": "yarn run prod:scss && aws s3 cp dist/ s3://dmariatesting.com --recursive",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
