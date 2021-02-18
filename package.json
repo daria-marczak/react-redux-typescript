@@ -6,6 +6,7 @@
   "dependencies": {
     "@storybook/addon-controls": "^6.1.18",
     "@storybook/react": "^6.1.18",
+    "@storybook/storybook-deployer": "^2.8.7",
     "@types/react-loadable": "^5.5.4",
     "@types/styled-components": "^5.1.7",
     "react": "^16.13.1",
@@ -77,7 +78,8 @@
     "test": "jest",
     "deploy": "yarn run prod:scss && aws s3 cp dist/ s3://dmariatesting.com --recursive",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-aws-s3 --bucket-path=dmariatesting-storybook"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [

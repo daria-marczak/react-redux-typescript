@@ -8,13 +8,23 @@ cache:
 script:
   - yarn test
   - yarn run prod:scss
+  - yarn build-storybook
 deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: $S3_BUCKET
-  region: eu-central-1
-  skip_cleanup: true
-  local_dir: dist
-  on:
-    branch: master
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+    bucket: $S3_BUCKET
+    region: eu-central-1
+    skip_cleanup: true
+    local_dir: dist
+    on:
+      branch: master
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY_ID_STORYBOOK
+    secret_access_key: $AWS_SECRET_ACCESS_KEY_STORYBOOK
+    bucket: $S3_BUCKET_STORYBOOK
+    region: eu-central-1
+    skip_cleanup: true
+    script: storybook-to-aws-s3 --bucket-path=$S3_BUCKET_STORYBOOK --ci
+    on:
+      branch: master
