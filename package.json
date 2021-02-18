@@ -78,8 +78,7 @@
     "test": "jest",
     "deploy": "yarn run prod:scss && aws s3 cp dist/ s3://dmariatesting.com --recursive",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-aws-s3 --bucket-path=dmariatesting-storybook"
+    "build-storybook": "build-storybook"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
