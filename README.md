@@ -23,16 +23,19 @@ Personal React boilerplate project for learning purposes.
 
 ## Goals
 
-- 🚧 implement some code statistics tools (CC, code forensics)
 - ✅ TravisCI config + AWS deployment
-- 🚧 Storybook configuration (and deploy to AWS)
-- 🚧 [Lighthouse CI][https://github.com/GoogleChrome/lighthouse-ci]
-- 🚧 [webpack bundle analyzer][https://www.npmjs.com/package/webpack-bundle-analyzer]
+- ✅ Storybook configuration (and deploy to AWS)
+- 🚧 Storybook CI deployment configuration
 - ✅ tree shaking and code splitting
 - ✅ Webpack workflows for better performance (styles, images pipelines)
 - ✅ config for styled-components
 - ✅ separate config for SCSS
 - 🚧 deploy feature branches (dynamic stagings)
+
+### Smaller goals
+- 🚧 [Lighthouse CI][https://github.com/GoogleChrome/lighthouse-ci]
+- 🚧 [webpack bundle analyzer][https://www.npmjs.com/package/webpack-bundle-analyzer]
+- 🚧 implement some code statistics tools (CC, code forensics)
 
 ## Notes
 In order to optimize SVGs, please use the [svgomg][https://jakearchibald.github.io/svgomg/].
