@@ -26,5 +26,6 @@ deploy:
     region: eu-central-1
     skip_cleanup: true
     local_dir: storybook-static
+    upload-dir: storybook
     on:
       branch: master
