@@ -1,4 +1,4 @@
-<center> <h1>React boilerplate</h1> </center>
+<center> <h1>React Redux with Typescript</h1> </center>
 
 Personal React boilerplate project for learning purposes.
 
@@ -10,6 +10,9 @@ Personal React boilerplate project for learning purposes.
 - Lint-staged with husky
 - React
 - TravisCI
+- Storybook
+- Redux
+- TypeScript
 
 ## Scripts
 
@@ -24,22 +27,3 @@ Personal React boilerplate project for learning purposes.
 | deploy | Deploy webpack application from /dist folder |
 | storybook | Run storybook |
 | build-storybook | Build storybook |
-
-## Goals
-
-- ✅ TravisCI config + AWS deployment
-- ✅ Storybook configuration (and deploy to AWS)
-- 🚧 Storybook CI deployment configuration
-- ✅ tree shaking and code splitting
-- ✅ Webpack workflows for better performance (styles, images pipelines)
-- ✅ config for styled-components
-- ✅ separate config for SCSS
-- 🚧 deploy feature branches (dynamic stagings)
-
-### Smaller goals
-- 🚧 [Lighthouse CI][https://github.com/GoogleChrome/lighthouse-ci]
-- 🚧 [webpack bundle analyzer][https://www.npmjs.com/package/webpack-bundle-analyzer]
-- 🚧 implement some code statistics tools (CC, code forensics)
-
-## Notes
-In order to optimize SVGs, please use the [svgomg][https://jakearchibald.github.io/svgomg/].
